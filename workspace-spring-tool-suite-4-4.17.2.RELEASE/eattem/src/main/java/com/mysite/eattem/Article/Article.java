@@ -1,5 +1,6 @@
 package com.mysite.eattem.Article;
 
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -37,16 +38,9 @@ public class Article {
 	
 	@Column
 	private String[] taste;
+
 	
-	public static Article saveArticle(ArticleFormDto articleFormDto) {
-		Article article = new Article();
-		article.setPdName(articleFormDto.getPdName());
-		article.setPdInfo(articleFormDto.getPdInfo());
-		article.setPrice(articleFormDto.getPrice());
-		article.setManufacturer(articleFormDto.getManufacturer());
-		article.setVender(articleFormDto.getVender());
-		article.setTaste(articleFormDto.getTaste());
-		
-		return article;
-	}
+	private String url;
+	
+	
 }

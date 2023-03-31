@@ -32,13 +32,10 @@ public class ArticleFormDto {
 
 	private String[] taste;
 
-	@Override
-	public String toString() {
-		return "ArticleFormDto [pdName=" + pdName + ", pdInfo=" + pdInfo + ", manufacturer=" + manufacturer
-				+ ", vender=" + Arrays.toString(vender) + ", price=" + price + ", taste=" + Arrays.toString(taste)
-				+ "]";
-	}
-	public Article toEntity() {
-		return new Article(null, pdName, pdInfo, manufacturer, vender, price, taste);
-	}
+	private String url;
+
+
+	
+	
+
 }

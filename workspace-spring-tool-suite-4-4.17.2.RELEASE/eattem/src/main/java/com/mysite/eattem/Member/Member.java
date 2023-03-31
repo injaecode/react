@@ -7,7 +7,7 @@ import org.hibernate.annotations.ColumnDefault;
 import org.hibernate.annotations.CreationTimestamp;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.mysite.eattem.Article.SellStatus;
+
 import com.mysite.eattem.Article.Taste;
 
 import jakarta.persistence.Column;
@@ -19,6 +19,7 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -30,6 +31,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Table(name="Member")
 public class Member {
 
 	
@@ -47,7 +49,6 @@ public class Member {
 	private String nickname;
 	
 	
-	
     private String gender;
 
 	
@@ -58,8 +59,7 @@ public class Member {
 	private Timestamp createDate;
 
 	private String[] taste;
-//	@Embedded
-//	private Taste taste;
+
 
 	public static Member saveMember(MemberFormDto memberFormDto, PasswordEncoder passwordEncoder) {
 		Member member = new Member();

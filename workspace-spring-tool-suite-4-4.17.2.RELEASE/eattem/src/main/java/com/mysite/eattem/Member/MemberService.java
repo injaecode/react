@@ -57,6 +57,17 @@ public class MemberService implements UserDetailsService{
 	        return new User(members.getEmail(),members.getPw(),authorities);
 	    }
 
+	public String emailCheck(String email) {
+		Optional<Member> mem = memberRepository.findByemail(email);
+		if(mem.isPresent()) {
+			return "ok";
+			
+		}else {
+			return "no";
+		}
+		
+	}
+
 
 
 }
